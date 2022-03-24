@@ -2,7 +2,7 @@
 
 {% block body %}
 
-<h2> Selam </h2>
+<h2> D0010 </h2>
 
 <a href="{% url 'upload-view' %}"> Back to the main page </a>
 
@@ -16,7 +16,7 @@
 
         {% if mpan in data.reference %}
         <li>
-    Product ID {{ data.item_id }} reference: {{data.reference}}, owner: {{data.owner}}
+    Product ID {{ data.item_id }} reference: {{data.reference}}, name: {{data.name}}, owner: {{data.owner}}
         </li>
         {% endif %}
 
