@@ -41,7 +41,8 @@ def upload_file_view(request):
 
 
 def view_d0010(request):
-    mpan_cores_d0010 = ["J0003","J0004"]
+    mpan_cores_d0010 = ["J0003","J0022","J0024","J0012","J0004","J0171","J0010","J0016",
+    "J0040","J0044","J1013","J0045","J188","J0332","J0047"] # All MPANs related to D0010
     dataitems = DataItem.objects.all()
     
     return render(request, 'csvapp/viewdata.html',{'dataitems':dataitems, 'mpans':mpan_cores_d0010})
