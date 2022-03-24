@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h4> First submit the csv file and then go for the product </h4>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}} <br> <br>
+    <button type="submit">Confirm</button>
+</form>
+
+<h4> List of flows </h4>
+<ul>
+    <li> <a href="{% url 'viewdata' %}"><h4>D0010</h4></a> </li>
+</ul>
+
+<h3>All Data Items </h3>
+
+<ol>
+    {% for data in dataitems %}
+    <li>
+
+    Product ID {{ data.item_id }}, reference: {{data.reference}}, name: {{data.name}}, owner: {{data.owner}}
+
+    </li>
+    {% endfor %}
+</ol>
+
+
+{% endblock body %}
