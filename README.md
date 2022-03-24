@@ -1,4 +1,4 @@
-# Octopus Energy
+# Erol Yarataner - Octopus Energy
 OE Technical Challenge Project
 
 Python based script to detect the related items with reference D0010
