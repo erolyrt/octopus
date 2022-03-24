@@ -34,7 +34,7 @@ def upload_file_view(request):
             obj.save()
     dataitems = DataItem.objects.all()
 
-    return render(request, 'csvs/upload.html', {
+    return render(request, 'csvapp/upload.html', {
         'form':form,
         'dataitems':dataitems
     })
