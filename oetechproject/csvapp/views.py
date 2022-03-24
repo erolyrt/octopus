@@ -44,4 +44,4 @@ def view_d0010(request):
     mpan_cores_d0010 = ["J0003","J0004"]
     dataitems = DataItem.objects.all()
     
-    return render(request, 'csvs/viewdata.html',{'dataitems':dataitems, 'mpans':mpan_cores_d0010})
+    return render(request, 'csvapp/viewdata.html',{'dataitems':dataitems, 'mpans':mpan_cores_d0010})
