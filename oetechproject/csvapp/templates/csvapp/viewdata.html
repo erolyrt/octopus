@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2> Selam </h2>
+
+<a href="{% url 'upload-view' %}"> Back to the main page </a>
+
+
+
+<ol>
+    {% for data in dataitems %}
+    
+        
+        {% for mpan in mpans %}
+
+        {% if mpan in data.reference %}
+        <li>
+    Product ID {{ data.item_id }} reference: {{data.reference}}, owner: {{data.owner}}
+        </li>
+        {% endif %}
+
+        {% endfor %}
+                
+    
+    {% endfor %}
+</ol>
+
+
+{% endblock body %}
